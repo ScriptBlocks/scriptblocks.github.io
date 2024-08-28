@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main  # Set the branch you want to trigger the deploy from
+      - main  # Trigger the workflow on pushes to the main branch
 
 jobs:
   build:
@@ -16,20 +16,20 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'  # Specify your Node.js version here
+        node-version: '18'  # Specify your Node.js version
 
     - name: Install dependencies
       run: npm install
 
     - name: Build
-      run: npm run build  # Adjust this if you have a specific build script
+      run: npm run build  # Packages the application into an executable
 
     - name: Deploy
       run: |
         echo "Deploying application..."
-        # Add your deployment script or commands here
-        # For example, if you deploy to GitHub Pages:
-        npm install -g gh-pages
-        npm run deploy
+        # Example deployment step:
+        # You can use SCP, FTP, or any other method to deploy the built application
+        # For example, to a remote server:
+        scp dist/index-linux-x64 user@remote-server:/path/to/deployment
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
