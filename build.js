@@ -2,14 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const ejs = require('ejs');
 const fsExtra = require('fs-extra');
-const express = require('express');
-const app = express();
 
-// Set up the view engine
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-
-// Define the paths
+// Define paths
 const outputDir = path.join(__dirname, 'build');
 const viewsDir = path.join(__dirname, 'views');
 const publicDir = path.join(__dirname, 'public');  // Source for static assets
@@ -39,7 +33,7 @@ const copyPublicFolder = async () => {
   }
 };
 
-// Example render calls
+// Build function
 const build = async () => {
   // Create the output directory if it doesn't exist
   if (!fs.existsSync(outputDir)) {
@@ -47,8 +41,8 @@ const build = async () => {
     console.log('Created output directory:', outputDir);
   }
 
-  // Render EJS templates
-  await renderEjsToHtml('index.ejs', { title: 'My Page Title' }, 'index.html');
+  // Render EJS templates with dynamic title data
+  await renderEjsToHtml('index.ejs', { title: 'Home' }, 'index.html');
 
   // Copy static files from public folder to build folder
   await copyPublicFolder();
