@@ -204,3 +204,32 @@ code {
 .bash .bash-command {
     color: #ffffff; /* White commands */
 }
+
+/* Split container to hold both sections */
+split {
+    display: flex;
+    flex-direction: row; /* Align children vertically */
+    width: 100%; /* Full width of the container */
+    margin: 20px 0; /* Margin to space out from other content */
+}
+
+/* Each section takes up half the height of the split container */
+.downloads-section, .documentation-section {
+    flex: 1; /* Equal height for both sections */
+    padding: 20px; /* Padding for internal spacing */
+    box-sizing: border-box; /* Ensure padding is included in height calculation */
+}
+
+/* Ensure consistent styles for the section headers */
+.downloads-section h2, .documentation-section h2 {
+    margin-top: 0; /* Remove default margin at the top */
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+}
+
+.btn-container > .btn {
+    margin-bottom: 0.5em;
+}
