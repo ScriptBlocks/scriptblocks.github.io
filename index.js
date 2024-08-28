@@ -18,6 +18,10 @@ app.get('/', (req, res) => {
     res.render('index', { title: 'Home' });
 });
 
+app.get('/', (req, res) => {
+    res.render('downloads', { title: 'Downloads' });
+});
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

@@ -43,6 +43,7 @@ const build = async () => {
 
   // Render EJS templates with dynamic title data
   await renderEjsToHtml('index.ejs', { title: 'Home' }, 'index.html');
+  await renderEjsToHtml('downloads.ejs', { title: 'Downloads' }, 'downloads.html');
 
   // Copy static files from public folder to build folder
   await copyPublicFolder();

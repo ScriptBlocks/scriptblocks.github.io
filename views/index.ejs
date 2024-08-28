@@ -20,18 +20,56 @@
         <pre><code class="bash"><span class="bash-prompt">$</span> <span class="bash-command">git clone https://github.com/ScriptBlocks/example-project.git</span></code></pre>
     </div>
 
-    <div class="code-block">
-        <div class="code-header">
-            <span class="code-language">Python</span>
-            <span class="code-copy">Copy</span>
+    <div class="code-block-split">
+
+        <div class="code-block">
+            <div class="code-header">
+                <span class="code-language">Bash</span>
+                <span class="code-copy">Copy</span>
+            </div>
+            <pre><code class="bash"># Windows
+$ winget install Python.Python.3
+
+# MacOS
+$ brew install python
+
+# Linux
+$ sudo apt install python
+
+# Get Started
+$ pip install poetry
+$ poetry install</code></pre>
         </div>
-        <pre><code class="python">import scriptblocks
+
+        <div class="code-block">
+            <div class="code-header">
+                <span class="code-language">Python</span>
+                <span class="code-copy">Copy</span>
+            </div>
+            <pre><code class="python">import scriptblocks
             
 app = scriptblocks.App()
 app.name = "Welcome to ScriptBlocks!"
 
 app.render()</code></pre>
+        </div>
+
     </div>
+
+    <split>
+        <div class="downloads-section">
+            <h2>Downloads</h2>
+            <a class="btn btn-primary"><i class="fa-brands fa-windows"></i> Windows v1.0.0 (latest) 0MB</a>
+            <a class="btn btn-primary"><i class="fa-brands fa-apple"></i> MacOS v1.0.0 (latest) 0MB</a>
+            <a class="btn btn-primary"><i class="fa-brands fa-linux"></i> Linux v1.0.0 (latest) 0MB</a>
+            <a href="/downloads"><i class="fa-solid fa-chevron-left"></i> Older versions</a>
+        </div>
+        <div class="documentation-section">
+            <h2>Documentation</h2>
+            <p>We highly recommend that you read our documentation for a set of instructions on how to use the IDE, our package, and how to code Python.</p>
+            <a class="btn btn-primary"><i class="fa-solid fa-book"></i> Read now!</a>
+        </div>
+    </split>
     
     <!-- Include the JavaScript for copy functionality -->
     <script src="/js/script.js"></script>
