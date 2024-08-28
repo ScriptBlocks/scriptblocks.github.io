@@ -15,11 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Define routes
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Home Page' });
-});
-
-app.get('/about', (req, res) => {
-    res.render('about', { title: 'About Page' });
+    res.render('index', { title: 'Home' });
 });
 
 // Start the server
