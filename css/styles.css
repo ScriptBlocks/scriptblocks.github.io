@@ -115,16 +115,38 @@ body > *:not(.navbar) {
     line-height: 1.2; /* Adjust line height to improve readability */
 }
 
-/* Updated Code Block Styles */
+/* Ensure the code-block-split container takes up the full width */
+.code-block-split {
+    display: flex;
+    flex-direction: row; /* Align child divs horizontally */
+    width: 100%; /* Full width of the container */
+    height: auto; /* Adjust height based on content */
+    margin: 20px 0; /* Margin to space out from other content */
+}
+
+/* Style each code block */
+.code-block {
+    flex: 1; /* Each block takes up half the width */
+    padding: 10px; /* Padding for internal spacing */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+}
+
+/* Make sure both code blocks have the same height */
+.code-block-pre {
+    flex: 1; /* Make the pre element take up the remaining space */
+    overflow: auto; /* Handle overflow if the content is too large */
+}
+
+/* Ensure consistent appearance for each code block */
 pre {
     background-color: #333;
-    border-radius: 0 0 1em 1em; /* Top-left and top-right corners are 0, bottom-right and bottom-left corners are 8px */
+    border-radius: 0 0 1em 1em; /* Rounded corners at the bottom */
     padding: 15px;
-    margin: 20px 0;
-    position: relative;
-    font-family: 'Consolas', monospace;
-    color: #f8f8f2;
+    margin: 0; /* Remove default margin */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Ensure pre takes up full height of its container */
 }
 
 .code-header {
@@ -163,14 +185,14 @@ pre {
 
 pre {
     margin: 0;
+    overflow-x: auto;
+    font-size: 16px;
+    color: #f8f8f2; /* Base color for code */
 }
 
 code {
     display: block;
-    overflow-x: auto;
     padding: 10px;
-    font-size: 16px;
-    color: #f8f8f2; /* Base color for code */
     background-color: #ffffff00 !important;
 }
 
