@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Include the head partial and pass the title -->
+    <%- include('partials/head', { title: title }) %>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* Centers items horizontally */
+            align-items: center; /* Centers items vertically */
+            height: 100vh; /* Full viewport height, adjust if necessary */
+            flex-direction: column;
+        }
+
+        .store-item {
+            display: flex;
+            flex-direction: column; /* Align children vertically */
+            justify-content: center; /* Center content vertically within the store-item */
+            align-items: center; /* Center content horizontally within the store-item */
+            text-align: center; /* Center text within store-item */
+        }
+
+        .btn-container {
+            margin-top: 20px; /* Adjust margin if needed */
+        }
+    </style>
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+<body>
+    <!-- Include the navbar partial -->
+    <%- include('partials/navbar') %>
+
+    <h1>Store</h1>
+    
+    <split>
+        <div class="store-item">
+            <h2>ScriptBlocks License Key (1 Year)</h2>
+            <div class="btn-container">
+                <!-- <stripe-buy-button
+                buy-button-id="buy_btn_1PtVPsKgmSOOnEm6sWCe11G0"
+                publishable-key="pk_live_51PX5ReKgmSOOnEm6l1URdzBLvgR85mQgFaP53ctpmGNIofFADz6i89WfiaLbUDevqG6Gv0xnzWbkOVCjgBQUcJZN00OGYuPIcg"
+                >
+                </stripe-buy-button> -->
+                This product is unavailable.<br>Message from owner: If anyone knows how to use Stripe APIs, feel free to contribute to get a free license key.
+            </div>
+        </div>
+        <!-- <div class="store-item">
+            <h2>ScriptBlocks License Key (1 Year)</h2>
+            <div class="btn-container">
+                <stripe-buy-button
+                buy-button-id="buy_btn_1PtVPsKgmSOOnEm6sWCe11G0"
+                publishable-key="pk_live_51PX5ReKgmSOOnEm6l1URdzBLvgR85mQgFaP53ctpmGNIofFADz6i89WfiaLbUDevqG6Gv0xnzWbkOVCjgBQUcJZN00OGYuPIcg"
+                >
+                </stripe-buy-button>
+            </div>
+        </div> -->
+    </split>
+    
+    <!-- Include the JavaScript for copy functionality -->
+    <script src="/js/script.js"></script>
+</body>
+</html>
