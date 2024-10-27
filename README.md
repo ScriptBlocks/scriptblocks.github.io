@@ -1,2 +1,2 @@
 # website
-API for ScriptBlocks
+Website for ScriptBlocks
